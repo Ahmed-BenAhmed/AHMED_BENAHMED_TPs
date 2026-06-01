@@ -1,0 +1,27 @@
+# === Projet exclu volontairement (travail personnel, hors TP) ===
+**/SmartexVR/
+
+# === Unity : dossiers/fichiers regeneres automatiquement ===
+# (limites au projet Unity ; ne touche pas aux PDF dans */rapport/build/)
+05-unity/projet/**/Library/
+05-unity/projet/**/Temp/
+05-unity/projet/**/Obj/
+05-unity/projet/**/obj/
+05-unity/projet/**/Build/
+05-unity/projet/**/Builds/
+05-unity/projet/**/Logs/
+05-unity/projet/**/UserSettings/
+05-unity/projet/**/MemoryCaptures/
+05-unity/projet/**/.vs/
+05-unity/projet/**/*.csproj
+05-unity/projet/**/*.sln
+05-unity/projet/**/*.slnx
+05-unity/projet/**/*.user
+
+# === Systeme / editeurs ===
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*~

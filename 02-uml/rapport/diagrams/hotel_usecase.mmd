@@ -1,0 +1,21 @@
+flowchart LR
+  Client([Client])
+  Reception([Receptionniste])
+  Admin([Administrateur])
+
+  subgraph Systeme["Systeme de reservation hotel"]
+    UC1((Consulter chambres))
+    UC2((Reserver chambre))
+    UC3((Payer reservation))
+    UC4((Annuler reservation))
+    UC5((Gerer disponibilites))
+  end
+
+  Client --> UC1
+  Client --> UC2
+  Client --> UC3
+  Client --> UC4
+  Reception --> UC5
+  Admin --> UC5
+  UC2 -. inclut .-> UC1
+  UC3 -. inclut .-> UC2

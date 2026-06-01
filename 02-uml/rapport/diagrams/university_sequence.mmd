@@ -1,0 +1,14 @@
+sequenceDiagram
+  actor Etudiant
+  participant Systeme
+  participant BD
+  participant Cours
+
+  Etudiant->>Systeme: sInscrire(cours)
+  Systeme->>BD: verifierEtudiant(id)
+  BD-->>Systeme: etudiantValide
+  Systeme->>Cours: verifierCapacite()
+  Cours-->>Systeme: placeDisponible
+  Systeme->>BD: enregistrerInscription()
+  BD-->>Systeme: inscriptionCreee
+  Systeme-->>Etudiant: confirmation

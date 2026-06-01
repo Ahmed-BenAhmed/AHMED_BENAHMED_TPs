@@ -1,0 +1,38 @@
+classDiagram
+  direction LR
+
+  class Client {
+    +int id
+    +String nom
+    +String telephone
+    +reserver()
+    +annuler()
+  }
+
+  class Chambre {
+    +int numero
+    +String type
+    +double prixNuit
+    +String statut
+    +estDisponible()
+  }
+
+  class Reservation {
+    +int id
+    +Date dateDebut
+    +Date dateFin
+    +String statut
+    +confirmer()
+    +annuler()
+  }
+
+  class Paiement {
+    +int id
+    +double montant
+    +String mode
+    +valider()
+  }
+
+  Client "1" --> "0..*" Reservation : effectue
+  Reservation "1" --> "1" Chambre : concerne
+  Reservation "1" --> "0..1" Paiement : regleePar

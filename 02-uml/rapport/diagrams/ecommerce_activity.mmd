@@ -1,0 +1,8 @@
+flowchart LR
+  A([Debut]) --> B[Selection produits]
+  B --> C[Panier]
+  C --> D[Paiement]
+  D --> E[Commande confirmee]
+  E --> F([Fin])
+  C -- Panier incomplet --> B
+  D -- Paiement refuse --> D

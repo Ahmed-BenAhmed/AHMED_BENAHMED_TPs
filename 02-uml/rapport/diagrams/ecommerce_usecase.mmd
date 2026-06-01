@@ -1,0 +1,19 @@
+flowchart LR
+  Client([Client])
+  Admin([Administrateur])
+
+  subgraph Systeme["Plateforme e-commerce"]
+    UC1((Consulter produits))
+    UC2((Ajouter au panier))
+    UC3((Payer commande))
+    UC4((Gerer produits))
+    UC5((Consulter commandes))
+  end
+
+  Client --> UC1
+  Client --> UC2
+  Client --> UC3
+  Client --> UC5
+  Admin --> UC4
+  UC2 -. inclut .-> UC1
+  UC3 -. inclut .-> UC2

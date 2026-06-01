@@ -1,0 +1,37 @@
+classDiagram
+  direction LR
+
+  class Personne {
+    +int id
+    +String nom
+    +String email
+  }
+
+  class Etudiant {
+    +String cne
+    +sInscrire(cours)
+    +consulterNotes()
+  }
+
+  class Enseignant {
+    +String grade
+    +publierCours()
+    +saisirNotes()
+  }
+
+  class Cours {
+    +int id
+    +String titre
+    +int volumeHoraire
+  }
+
+  class Inscription {
+    +Date dateInscription
+    +String statut
+  }
+
+  Personne <|-- Etudiant
+  Personne <|-- Enseignant
+  Etudiant "1" --> "0..*" Inscription : effectue
+  Inscription "1" --> "1" Cours : concerne
+  Enseignant "1" --> "0..*" Cours : enseigne

@@ -1,0 +1,16 @@
+sequenceDiagram
+  actor Client
+  participant Systeme
+  participant Panier
+  participant ServicePaiement
+  participant Commande
+
+  Client->>Systeme: consulterProduits()
+  Systeme-->>Client: listeProduits
+  Client->>Panier: ajouter(produit)
+  Panier-->>Client: panierMisAJour
+  Client->>Systeme: payer()
+  Systeme->>ServicePaiement: verifier(montant, carte)
+  ServicePaiement-->>Systeme: OK
+  Systeme->>Commande: confirmer()
+  Commande-->>Client: confirmation

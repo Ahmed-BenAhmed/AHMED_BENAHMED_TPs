@@ -1,0 +1,51 @@
+classDiagram
+  direction LR
+
+  class Client {
+    +int id
+    +String nom
+    +String email
+    +consulterProduits()
+    +ajouterAuPanier(produit)
+    +payer()
+  }
+
+  class Administrateur {
+    +int id
+    +String nom
+    +gererProduit()
+  }
+
+  class Produit {
+    +int id
+    +String libelle
+    +double prix
+    +int stock
+  }
+
+  class Panier {
+    +int id
+    +ajouterProduit(produit)
+    +calculerTotal()
+  }
+
+  class Commande {
+    +int id
+    +Date date
+    +String statut
+    +confirmer()
+  }
+
+  class Paiement {
+    +int id
+    +double montant
+    +String statut
+    +verifier()
+  }
+
+  Client "1" --> "1" Panier : possede
+  Client "1" --> "0..*" Commande : passe
+  Panier "1" --> "1..*" Produit : contient
+  Commande "1" --> "1..*" Produit : regroupe
+  Commande "1" --> "1" Paiement : regle
+  Administrateur --> Produit : gere

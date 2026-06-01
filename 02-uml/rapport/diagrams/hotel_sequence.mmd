@@ -1,0 +1,14 @@
+sequenceDiagram
+  actor Client
+  participant Systeme
+  participant BD
+  participant Paiement
+
+  Client->>Systeme: reserver(chambre, dates)
+  Systeme->>BD: verifierDisponibilite(chambre, dates)
+  BD-->>Systeme: disponible
+  Systeme->>Paiement: valider(montant)
+  Paiement-->>Systeme: paiementAccepte
+  Systeme->>BD: creerReservation()
+  BD-->>Systeme: reservationConfirmee
+  Systeme-->>Client: recuReservation
