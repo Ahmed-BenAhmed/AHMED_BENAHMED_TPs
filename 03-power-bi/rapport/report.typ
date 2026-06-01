@@ -40,6 +40,25 @@
   body,
 )
 
+#let dash(name, title, note) = {
+  figure(
+    image("figures/" + name + ".png", width: 100%),
+    caption: [#title],
+  )
+  block(
+    fill: soft,
+    stroke: 0.6pt + amber.darken(5%),
+    radius: 5pt,
+    inset: 9pt,
+    width: 100%,
+  )[
+    #text(9pt, weight: "bold", fill: navy)[Lecture du tableau de bord]
+    #v(0.15cm)
+    #text(9.5pt)[#note]
+  ]
+  v(0.4cm)
+}
+
 #let cover() = {
   set page(paper: "a4", margin: 2cm, numbering: none)
   page[
@@ -205,6 +224,30 @@ La derniere partie rend le rapport reellement interactif et le mene a son abouti
 #shot(27, [Capture 27 - Champs du visuel carte.], [Le visuel carte utilise `Merged` comme localisation, `Chain` comme legende et une mesure de ventes pour dimensionner les bulles.])
 #shot(28, [Capture 28 - Synthese finale des ventes par Etat, manager et acheteur.], [La page combine filtres, indicateurs cles, carte d'Australie et comparaisons par manager et par acheteur.])
 #shot(29, [Capture 29 - Page de synthese finale du rapport Power BI.], [Cette vue de conclusion rassemble en un seul ecran les principaux indicateurs et les repartitions geographiques et commerciales.])
+
+= Tableaux de bord finalises (TP 1 a 4)
+
+Au-dela des etapes de construction, cette section presente les quatre tableaux de bord aboutis, correspondant aux fichiers `tp1.pbix` a `tp4.pbix`. Chaque rapport repond a un besoin d'analyse distinct et illustre une facette differente de Power BI : indicateurs cles, repartitions geographiques, axes temporels et croisements multi-dimensions.
+
+== TP 1 : Analyse des ventes, benefices et quantites
+
+#dash("tp1_p1", [TP 1 - Page principale : vue d'ensemble des ventes.], [Trois cartes resument l'activite : 2,30 M de ventes, 286,40 K de benefices et 38 K de quantite. Autour, un graphique des ventes par annee, un combine ventes-benefices par annee et trimestre, une carte par Etat, un anneau par segment et un secteur par categorie, le tout pilote par un slicer `Date de commande`.])
+
+#dash("tp1_p2", [TP 1 - Page d'analyse detaillee par region et categorie.], [Un slicer `Region` et un tableau croise par annee (2012-2015) accompagnent trois visuels : ventes par Etat et categorie, benefices par annee et categorie en aires empilees, et ventes par segment. La page approfondit la lecture commerciale amorcee en page 1.])
+
+== TP 2 : Ventes par categorie de produit
+
+#dash("tp2", [TP 2 - Tableau de bord des ventes par categorie de produit.], [La page totalise 29 M EUR de ventes et compte les produits et commandes. Les ventes se declinent par categorie (barres et secteur), par produit (nombre de commandes), par pays (carte) et dans une treemap, avec une table de synthese. Les familles Beverages, Condiments, Confections et Dairy Products structurent l'analyse.])
+
+== TP 3 : Suivi des stocks
+
+#dash("tp3", [TP 3 - Tableau de bord de suivi des stocks.], [Les cartes affichent le stock total (9,07 M, en repli de 2,87 %), le stock viande (561,29 K) et le stock boisson (1,81 M). La courbe de quantite par mois met en evidence un pic en septembre, tandis qu'un anneau repartit la valeur de stock par famille d'agregat et un histogramme detaille la quantite par designation de famille.])
+
+== TP 4 : Analyse commerciale multi-axes
+
+#dash("tp4_p1", [TP 4 - Page 1 : ventes, marges et rentabilite.], [La page croise les ventes par chaine et par Etat, le cout et le benefice brut par exercice (FY), un nuage de points GP% et benefice brut par categorie et trimestre (vue 2018 Q1), un secteur par chaine et une carte par Etat, avec des slicers de filtrage.])
+
+#dash("tp4_p2", [TP 4 - Page 2 : performance par responsable et par acheteur.], [Les indicateurs (GP%, 57,66 M de ventes, 24,48 M de profit) surplombent des classements des ventes par responsable et par acheteur, une carte des ventes par Etat et chaine, et une courbe d'evolution par annee, trimestre, mois et jour.])
 
 = Conclusion
 
