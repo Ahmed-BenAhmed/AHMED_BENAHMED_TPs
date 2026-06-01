@@ -1,0 +1,24 @@
+# Normalize text files to LF in the repository
+* text=auto eol=lf
+
+# === Binary files: never apply EOL conversion or text diffing ===
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pbix  binary
+*.rar   binary
+*.zip   binary
+*.fbx   binary
+*.wlt   binary
+
+# Unity binary/asset files
+*.unity      -text
+*.asset      -text
+*.prefab     -text
+*.mat        -text
+*.meta       -text
+*.lighting   -text
+*.inputactions -text

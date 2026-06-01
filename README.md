@@ -14,11 +14,13 @@ Chaque thème regroupe, lorsqu'ils existent, **les fichiers du projet** (code, e
 
 | # | Thème | Projet | Rapport (PDF) |
 |---|-------|:------:|---------------|
-| 01 | **Git & GitHub** — gestion de versions et collaboration | ✅ | [tp_git_github](01-git-github/rapport/build/tp_git_github_ahmed_report.pdf) |
-| 02 | **Modélisation UML** — études de cas et diagrammes | — | [tp_uml](02-uml/rapport/build/tp_uml_ahmed_report.pdf) |
-| 03 | **Power BI** — Business Intelligence et tableaux de bord | ✅ | [tp_power_bi](03-power-bi/rapport/build/tp_power_bi_ahmed_report.pdf) |
-| 04 | **SQL Server / SSIS** — atelier ETL | — | [tp_sql_server_ssis](04-sql-server-ssis/rapport/build/tp_sql_server_ssis_ahmed_report.pdf) |
-| 05 | **Unity 3D** — scène interactive (système solaire) | ✅ | [tp_unity](05-unity/rapport/build/tp_unity_ahmed_report.pdf) |
+| 01 | **Git & GitHub** — gestion de versions et collaboration | ✅ | [📄 TP_Git_GitHub](TP_Git_GitHub_AHMED_BENAHMED.pdf) · [⬇️ télécharger](https://github.com/Ahmed-BenAhmed/AHMED_BENAHMED_TPs/raw/main/TP_Git_GitHub_AHMED_BENAHMED.pdf) |
+| 02 | **Modélisation UML** — études de cas et diagrammes | — | [📄 TP_UML](TP_UML_AHMED_BENAHMED.pdf) · [⬇️ télécharger](https://github.com/Ahmed-BenAhmed/AHMED_BENAHMED_TPs/raw/main/TP_UML_AHMED_BENAHMED.pdf) |
+| 03 | **Power BI** — Business Intelligence et tableaux de bord | ✅ | [📄 TP_Power_BI](TP_Power_BI_AHMED_BENAHMED.pdf) · [⬇️ télécharger](https://github.com/Ahmed-BenAhmed/AHMED_BENAHMED_TPs/raw/main/TP_Power_BI_AHMED_BENAHMED.pdf) |
+| 04 | **SQL Server / SSIS** — atelier ETL | — | [📄 TP_SQL_Server_SSIS](TP_SQL_Server_SSIS_AHMED_BENAHMED.pdf) · [⬇️ télécharger](https://github.com/Ahmed-BenAhmed/AHMED_BENAHMED_TPs/raw/main/TP_SQL_Server_SSIS_AHMED_BENAHMED.pdf) |
+| 05 | **Unity 3D** — scène interactive (système solaire) | ✅ | [📄 TP_Unity](TP_Unity_AHMED_BENAHMED.pdf) · [⬇️ télécharger](https://github.com/Ahmed-BenAhmed/AHMED_BENAHMED_TPs/raw/main/TP_Unity_AHMED_BENAHMED.pdf) |
+
+> 💡 Les PDF des rapports sont aussi disponibles **à la racine du dépôt** (liens ci-dessus). Si l'aperçu PDF intégré de GitHub affiche « Invalid PDF », il s'agit d'une limite ponctuelle de l'afficheur de GitHub, pas d'un fichier corrompu : utilisez le lien **⬇️ télécharger** (URL `raw`) qui fonctionne toujours.
 
 ---
 
@@ -75,6 +77,8 @@ AHMED_BENAHMED_TPs/
 ├── 05-unity/
 │   ├── projet/        # projets Unity + textures
 │   └── rapport/
+├── TP_*_AHMED_BENAHMED.pdf   # rapports finaux (copies à la racine)
+├── .gitattributes
 ├── .gitignore
 └── README.md
 ```
